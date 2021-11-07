@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body{
+        background-image : url('feedbck.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+       
+        
+    }
+    </style>
+</head>
+<body>
+    <h1>Feedback :-</h1>
+    <h2>Please give rating out of 10</h2>
+    <input type="text" id ="feedback"></input>
+    <button type="button" onclick="fun()">Submit your feedback</button>
+
+    <script>
+        function fun(){
+            let x = document.getElementById("feedback").value;
+
+            if(x<=5)
+            {
+                document.body.style.backgroundImage="url('bad.png')";
+                document.getElementById("print").innerHTML = "Sorry! , for inconvineance";
+            }
+            else
+            {
+                document.body.style.backgroundImage="url('good.png')";
+                document.getElementById("print").innerHTML = "Thank You! , and visit Again";
+            }
+            
+        }
+    </script>
+
+    <div id ="print"></div>
+
+</body>
+</body>
+</html>
